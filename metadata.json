@@ -1,0 +1,8 @@
+{
+  "name": "ECHO-SHIELD | RailSafety Ultrasonic Detection",
+  "description": "Smart ultrasonic obstacle detection and train driver early warning system prototype featuring 3D cockpit simulation, time-of-flight physics, and hardware telemetry.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #0b0f19;
+    color: #f1f5f9;
+    overflow-x: hidden;
+  }
+
+  code, kbd, samp, pre, .font-mono {
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  }
+}
+
+/* Radar scan effect */
+.radar-sweep {
+  background: conic-gradient(from 0deg at 50% 100%, rgba(16, 185, 129, 0.35) 0deg, rgba(16, 185, 129, 0) 60deg, transparent 360deg);
+}
+.radar-sweep-caution {
+  background: conic-gradient(from 0deg at 50% 100%, rgba(245, 158, 11, 0.45) 0deg, rgba(245, 158, 11, 0) 60deg, transparent 360deg);
+}
+.radar-sweep-critical {
+  background: conic-gradient(from 0deg at 50% 100%, rgba(239, 68, 68, 0.55) 0deg, rgba(239, 68, 68, 0) 60deg, transparent 360deg);
+}
+
+/* Cab windshield frame border effects */
+.cab-glass {
+  box-shadow: inset 0 0 120px rgba(0, 0, 0, 0.9), inset 0 12px 50px rgba(15, 23, 42, 0.95);
+}
+
+/* Ultrasonic wavefront animation in 2D overlays */
+@keyframes pulse-wave {
+  0% { transform: scale(0.2); opacity: 1; border-color: rgba(56, 189, 248, 0.9); }
+  100% { transform: scale(2.2); opacity: 0; border-color: rgba(56, 189, 248, 0); }
+}
+.wave-pulse {
+  animation: pulse-wave 1.6s cubic-bezier(0.2, 0.6, 0.35, 1) infinite;
+}
+
+/* Custom Glassmorphism */
+.glass-panel {
+  background: rgba(15, 23, 42, 0.82);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.glass-panel-alert {
+  background: rgba(239, 68, 68, 0.16);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+}
+.glass-panel-caution {
+  background: rgba(245, 158, 11, 0.14);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #0b0f19; }
+::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #475569; }
